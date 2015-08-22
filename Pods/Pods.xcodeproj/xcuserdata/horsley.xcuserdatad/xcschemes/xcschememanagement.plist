@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-gank-io-JSONModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-gank-io-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-gank-io-PINCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-gank-io-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-gank-io.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>44D9AD63D043027F0DA5CB60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>49B01838D1F1725A47A5C50A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72698EE3ADA5646A000D5680</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC995C4AF383818B40456BB4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F16A7D004FA6CAE1E420A9AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
