@@ -14,6 +14,10 @@
 		350711D61B886C6300C97727 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350711D51B886C6300C97727 /* Images.xcassets */; };
 		350711D91B886C6300C97727 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 350711D71B886C6300C97727 /* LaunchScreen.xib */; };
 		350711E51B886C6300C97727 /* gank_ioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 350711E41B886C6300C97727 /* gank_ioTests.m */; };
+		350711F01B88747900C97727 /* DailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350711EF1B88747900C97727 /* DailyViewController.m */; };
+		350711FA1B89799600C97727 /* ArticleWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350711F91B89799600C97727 /* ArticleWebViewController.m */; };
+		350712021B89BE1700C97727 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350712011B89BE1700C97727 /* PageViewController.m */; };
+		350712081B89BE6000C97727 /* ToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350712071B89BE6000C97727 /* ToastView.m */; };
 		A5EB287C826037FF173BCA17 /* libPods-gank-io.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC71872D597CE143C3C4DA0 /* libPods-gank-io.a */; };
 /* End PBXBuildFile section */
 
@@ -33,14 +37,22 @@
 		350711CA1B886C6300C97727 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		350711CC1B886C6300C97727 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		350711CD1B886C6300C97727 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		350711CF1B886C6300C97727 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		350711D01B886C6300C97727 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		350711CF1B886C6300C97727 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "gank-io/ViewController.h"; sourceTree = "<group>"; };
+		350711D01B886C6300C97727 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "gank-io/ViewController.m"; sourceTree = "<group>"; };
 		350711D31B886C6300C97727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		350711D51B886C6300C97727 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		350711D81B886C6300C97727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		350711DE1B886C6300C97727 /* gank-ioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gank-ioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		350711E31B886C6300C97727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		350711E41B886C6300C97727 /* gank_ioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gank_ioTests.m; sourceTree = "<group>"; };
+		350711EE1B88747900C97727 /* DailyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DailyViewController.h; path = "gank-io/DailyViewController.h"; sourceTree = "<group>"; };
+		350711EF1B88747900C97727 /* DailyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DailyViewController.m; path = "gank-io/DailyViewController.m"; sourceTree = "<group>"; };
+		350711F81B89799600C97727 /* ArticleWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleWebViewController.h; path = "gank-io/ArticleWebViewController.h"; sourceTree = "<group>"; };
+		350711F91B89799600C97727 /* ArticleWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleWebViewController.m; path = "gank-io/ArticleWebViewController.m"; sourceTree = "<group>"; };
+		350712001B89BE1700C97727 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageViewController.h; path = "gank-io/PageViewController.h"; sourceTree = "<group>"; };
+		350712011B89BE1700C97727 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageViewController.m; path = "gank-io/PageViewController.m"; sourceTree = "<group>"; };
+		350712061B89BE6000C97727 /* ToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToastView.h; path = "gank-io/ToastView.h"; sourceTree = "<group>"; };
+		350712071B89BE6000C97727 /* ToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToastView.m; path = "gank-io/ToastView.m"; sourceTree = "<group>"; };
 		77D597DD8A31E9ADA2EB676D /* Pods-gank-io.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gank-io.release.xcconfig"; path = "Pods/Target Support Files/Pods-gank-io/Pods-gank-io.release.xcconfig"; sourceTree = "<group>"; };
 		BEBE2437106C4B39F7857F75 /* Pods-gank-io.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gank-io.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gank-io/Pods-gank-io.debug.xcconfig"; sourceTree = "<group>"; };
 		FBC71872D597CE143C3C4DA0 /* libPods-gank-io.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gank-io.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,10 +108,11 @@
 		350711C71B886C6300C97727 /* gank-io */ = {
 			isa = PBXGroup;
 			children = (
+				350711F11B88D56C00C97727 /* Model */,
+				350711FC1B899D8700C97727 /* View */,
+				350711FB1B897B4500C97727 /* Controller */,
 				350711CC1B886C6300C97727 /* AppDelegate.h */,
 				350711CD1B886C6300C97727 /* AppDelegate.m */,
-				350711CF1B886C6300C97727 /* ViewController.h */,
-				350711D01B886C6300C97727 /* ViewController.m */,
 				350711D21B886C6300C97727 /* Main.storyboard */,
 				350711D51B886C6300C97727 /* Images.xcassets */,
 				350711D71B886C6300C97727 /* LaunchScreen.xib */,
@@ -132,6 +145,40 @@
 				350711E31B886C6300C97727 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		350711F11B88D56C00C97727 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		350711FB1B897B4500C97727 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				350712001B89BE1700C97727 /* PageViewController.h */,
+				350712011B89BE1700C97727 /* PageViewController.m */,
+				350711F81B89799600C97727 /* ArticleWebViewController.h */,
+				350711F91B89799600C97727 /* ArticleWebViewController.m */,
+				350711EE1B88747900C97727 /* DailyViewController.h */,
+				350711EF1B88747900C97727 /* DailyViewController.m */,
+				350711CF1B886C6300C97727 /* ViewController.h */,
+				350711D01B886C6300C97727 /* ViewController.m */,
+			);
+			name = Controller;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		350711FC1B899D8700C97727 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				350712061B89BE6000C97727 /* ToastView.h */,
+				350712071B89BE6000C97727 /* ToastView.m */,
+			);
+			name = View;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		7819F8D92C6F35C4187746D4 /* Pods */ = {
@@ -278,9 +325,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				350711FA1B89799600C97727 /* ArticleWebViewController.m in Sources */,
+				350712081B89BE6000C97727 /* ToastView.m in Sources */,
 				350711D11B886C6300C97727 /* ViewController.m in Sources */,
 				350711CE1B886C6300C97727 /* AppDelegate.m in Sources */,
+				350711F01B88747900C97727 /* DailyViewController.m in Sources */,
 				350711CB1B886C6300C97727 /* main.m in Sources */,
+				350712021B89BE1700C97727 /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

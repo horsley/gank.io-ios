@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "72698EE3ADA5646A000D5680"
+               BlueprintIdentifier = "5326DD45D22956005DBCDDBA"
                BuildableName = "libPods-gank-io.a"
                BlueprintName = "Pods-gank-io"
                ReferencedContainer = "container:Pods.xcodeproj">

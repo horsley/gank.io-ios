@@ -6,7 +6,6 @@ target 'gank-io' do
 	pod 'MBProgressHUD', '~> 0.9.1'
 	pod 'JSONModel'
 	pod 'PINCache', '~> 2.0'
-	
 end
 
 target 'gank-ioTests' do

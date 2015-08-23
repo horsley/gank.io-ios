@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F16A7D004FA6CAE1E420A9AA"
+               BlueprintIdentifier = "C4BB4E9E744E882F0A6D93C1"
                BuildableName = "libPods-gank-io-PINCache.a"
                BlueprintName = "Pods-gank-io-PINCache"
                ReferencedContainer = "container:Pods.xcodeproj">
