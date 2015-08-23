@@ -49,6 +49,10 @@ NSString const *API_BASE = @"http://gank.avosapps.com/api/day/";
     self.fail_count  = 0;
     
     
+    UILongPressGestureRecognizer *longPr = [UILongPressGestureRecognizer new];
+    [longPr addTarget:self action:@selector(longPressPhoto:)];
+    [self.imageView setUserInteractionEnabled:YES];
+    [self.imageView addGestureRecognizer:longPr];
     
     [self loadData];
 }
@@ -188,6 +192,7 @@ NSString const *API_BASE = @"http://gank.avosapps.com/api/day/";
             [self.imageView sd_setImageWithURL:[NSURL URLWithString:imgUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                 self.imageHeightConstraint.constant = self.imageView.frame.size.width / (image.size.width / image.size.height);
                 self.imageView.hidden = NO;
+                
             }];
         }
     }
@@ -202,6 +207,46 @@ NSString const *API_BASE = @"http://gank.avosapps.com/api/day/";
     NSDateFormatter *fmt = [NSDateFormatter new];
     [fmt setDateFormat:@"yyyy/MM/dd"];
     self.dateLabel.text = [NSString stringWithFormat:@"数据日期：%@",[fmt stringFromDate:self.dataDate]];
+}
+
+#pragma mark - Action 
+- (void)longPressPhoto:(UILongPressGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        return;
+    }
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"收藏"
+                                                                   message:@"收藏这张图片？"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSMutableArray *favList = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"fav_list"] mutableCopy];
+        if (!favList) {
+            favList = [NSMutableArray array];
+        }
+        
+        
+        NSDateFormatter *fmt = [NSDateFormatter new];
+        [fmt setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+        NSDateFormatter *fmt2 = [NSDateFormatter new];
+        [fmt2 setDateFormat:@"yyyy/MM/dd"];
+        
+        NSArray *fuli = [self.dataSource objectForKey:@"福利"];
+        NSString *url = [[fuli lastObject] objectForKey:@"url"];
+            
+        [favList addObject:@{
+                             @"title": [NSString stringWithFormat:@"%@ 的福利图", [fmt2 stringFromDate:self.dataDate]],
+                             @"stime": [fmt stringFromDate:[NSDate new]],
+                             @"url": url
+                             }];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:favList forKey:@"fav_list"];
+        
+        ToastView *hud = [ToastView showHUDAddedTo:[[UIApplication sharedApplication].windows lastObject] animated:YES];
+        hud.labelText = @"文章已收藏";
+        [hud hide:YES afterDelay:1.5f];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 /*

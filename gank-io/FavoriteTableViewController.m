@@ -7,6 +7,7 @@
 //
 
 #import "FavoriteTableViewController.h"
+#import "ArticleWebViewController.h"
 
 @interface FavoriteTableViewController ()
 @property (nonatomic) NSMutableArray *favList;
@@ -34,6 +35,8 @@
                                                                             action:@selector(popViewControllerAnimated:)];
     
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 1)];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"global_bg_img"]];
     
     if (!self.favList || self.favList.count == 0) {
         UILabel *helpLabel = [UILabel new];
@@ -107,6 +110,19 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @"删除";
+}
+
+#pragma mark - tableview delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSDictionary *dataItem = [self.favList objectAtIndex:indexPath.row];
+    ArticleWebViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ArticleWebViewController"];
+    vc.url = [dataItem objectForKey:@"url"];
+    vc.pageTitle = [dataItem objectForKey:@"title"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*
