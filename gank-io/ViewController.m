@@ -67,6 +67,7 @@
             
             DailyViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DailyViewController"];
             vc.dataDate = [thisDate dateByAddingTimeInterval:-24 * 60 * 60];
+            vc.addNavbarInset = true;
             [self.vcs insertObject:vc atIndex:index+1];
             
             return vc;

@@ -187,7 +187,7 @@
         <!--Daily View Controller-->
         <scene sceneID="1MS-rg-qSt">
             <objects>
-                <viewController storyboardIdentifier="DailyViewController" id="RNj-lw-Q8o" customClass="DailyViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DailyViewController" automaticallyAdjustsScrollViewInsets="NO" id="RNj-lw-Q8o" customClass="DailyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fBd-cv-vKK"/>
                         <viewControllerLayoutGuide type="bottom" id="7SN-wj-WHy"/>
@@ -279,6 +279,7 @@
                             <constraint firstAttribute="centerY" secondItem="KUW-q4-tgf" secondAttribute="centerY" id="cX4-vg-85S"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="dateLabel" destination="ucP-Yn-iXh" id="Lpn-IT-XSq"/>
                         <outlet property="imageHeightConstraint" destination="Ow3-oO-J2G" id="F9m-0g-x8S"/>

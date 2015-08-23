@@ -10,4 +10,5 @@
 
 @interface DailyViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic) NSDate *dataDate;
+@property (nonatomic) BOOL *addNavbarInset;
 @end

@@ -35,6 +35,10 @@ NSString const *API_BASE = @"http://gank.avosapps.com/api/day/";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (self.addNavbarInset) {
+        self.mainScrollView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+        self.mainScrollView.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, 0);
+    }
     
     self.mainScrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"global_bg_img"]];
     
