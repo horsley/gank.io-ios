@@ -7,6 +7,7 @@
 //
 
 #import "PageViewController.h"
+#import <MBProgressHUD.h>
 
 @interface PageViewController ()
 
@@ -54,6 +55,24 @@
     //self.navigationController.navigationBarHidden = true;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"first_use"]) {
+        
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[[UIApplication sharedApplication].windows lastObject] animated:YES];
+        hud.dimBackground = true;
+        hud.mode = MBProgressHUDModeText;
+        hud.color = [UIColor clearColor];
+        hud.labelFont = [UIFont boldSystemFontOfSize:30];
+        hud.labelText = @"左右滑动翻页";
+        
+        UITapGestureRecognizer *HUDSingleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideGuide)];
+        [hud addGestureRecognizer:HUDSingleTap];
+        
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -67,7 +86,14 @@
 
 - (void) clickMenuBtn {
     UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SettingTableViewController"];
-    [self.navigationController pushViewController:vc animated:YES];}
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void) hideGuide {
+    [MBProgressHUD hideHUDForView:[[UIApplication sharedApplication].windows lastObject] animated:YES];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"first_use"];
+}
 /*
 #pragma mark - Navigation
 
