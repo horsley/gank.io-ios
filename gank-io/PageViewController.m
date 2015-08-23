@@ -22,6 +22,7 @@
     
     UIButton *starBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [starBtn setImage:[UIImage imageNamed:@"star_icn"] forState:UIControlStateNormal];
+    [starBtn addTarget:self action:@selector(clickStarBtn) forControlEvents:UIControlEventTouchUpInside];
     starBtn.frame = CGRectMake(0, 0, 30, 30);
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:starBtn];
     
@@ -57,6 +58,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Action
+- (void) clickStarBtn {
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FavoriteTableViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void) clickMenuBtn {
+    
+}
 /*
 #pragma mark - Navigation
 

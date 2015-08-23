@@ -69,6 +69,28 @@
 #pragma mark - action
 - (void) rightBarBtnClick {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert addAction:[UIAlertAction actionWithTitle:@"添加收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSMutableArray *favList = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"fav_list"] mutableCopy];
+        if (!favList) {
+            favList = [NSMutableArray array];
+        }
+        
+        
+        NSDateFormatter *fmt = [NSDateFormatter new];
+        [fmt setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+        
+        [favList addObject:@{
+                             @"title": self.pageTitle,
+                             @"stime": [fmt stringFromDate:[NSDate new]],
+                             @"url": self.url
+                             }];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:favList forKey:@"fav_list"];
+        
+        ToastView *hud = [ToastView showHUDAddedTo:[[UIApplication sharedApplication].windows lastObject] animated:YES];
+        hud.labelText = @"文章已收藏";
+        [hud hide:YES afterDelay:1.5f];
+    }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"复制链接" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [[UIPasteboard generalPasteboard] setURL:[NSURL URLWithString:self.url]];
         

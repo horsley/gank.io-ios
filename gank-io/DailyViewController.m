@@ -125,10 +125,12 @@ NSString const *API_BASE = @"http://gank.avosapps.com/api/day/";
     }
     
     NSString *catKey = [allCat objectAtIndex:indexPath.section];
-    NSString *url = [[[self.dataSource objectForKey:catKey] objectAtIndex:indexPath.row] objectForKey:@"url"];
+    NSDictionary *dataItem = [[self.dataSource objectForKey:catKey] objectAtIndex:indexPath.row];
     
     ArticleWebViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ArticleWebViewController"];
-    vc.url = url;
+    vc.url = [dataItem objectForKey:@"url"];
+    vc.pageTitle = [dataItem objectForKey:@"desc"];
+    
     [self.navigationController pushViewController:vc animated:YES];
 }
 

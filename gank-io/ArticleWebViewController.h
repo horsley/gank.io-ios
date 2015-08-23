@@ -10,4 +10,5 @@
 
 @interface ArticleWebViewController : UIViewController <UIWebViewDelegate>
 @property (nonatomic) NSString *url;
+@property (nonatomic) NSString *pageTitle;
 @end
