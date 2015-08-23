@@ -170,7 +170,7 @@ NSString const *API_BASE = @"http://gank.avosapps.com/api/day/";
                                           }
                                           
                                           self.dataSource = [data copy];
-                                          [[PINCache sharedCache] setObject:cache forKey:[fmt stringFromDate:self.dataDate]];
+                                          [[PINCache sharedCache] setObject:data forKey:[fmt stringFromDate:self.dataDate]];
                                           
                                           self.fail_count = 0;
                                           [self updateView];

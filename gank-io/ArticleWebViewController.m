@@ -46,12 +46,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.navigationItem.titleView = indicator;
+    [indicator startAnimating];
+}
+
 #pragma mark - webview delegate
 
 -(void)webViewDidStartLoad:(UIWebView *)webView {
-    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    [indicator startAnimating];
-    self.navigationItem.titleView = indicator;
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView {

@@ -19,6 +19,7 @@
 		350712021B89BE1700C97727 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350712011B89BE1700C97727 /* PageViewController.m */; };
 		350712081B89BE6000C97727 /* ToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350712071B89BE6000C97727 /* ToastView.m */; };
 		3507120B1B89EE7200C97727 /* FavoriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3507120A1B89EE7200C97727 /* FavoriteTableViewController.m */; };
+		3507120E1B8A008000C97727 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3507120D1B8A008000C97727 /* SettingTableViewController.m */; };
 		A5EB287C826037FF173BCA17 /* libPods-gank-io.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC71872D597CE143C3C4DA0 /* libPods-gank-io.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		350712071B89BE6000C97727 /* ToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToastView.m; path = "gank-io/ToastView.m"; sourceTree = "<group>"; };
 		350712091B89EE7200C97727 /* FavoriteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoriteTableViewController.h; path = "gank-io/FavoriteTableViewController.h"; sourceTree = "<group>"; };
 		3507120A1B89EE7200C97727 /* FavoriteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoriteTableViewController.m; path = "gank-io/FavoriteTableViewController.m"; sourceTree = "<group>"; };
+		3507120C1B8A008000C97727 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingTableViewController.h; path = "gank-io/SettingTableViewController.h"; sourceTree = "<group>"; };
+		3507120D1B8A008000C97727 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingTableViewController.m; path = "gank-io/SettingTableViewController.m"; sourceTree = "<group>"; };
 		77D597DD8A31E9ADA2EB676D /* Pods-gank-io.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gank-io.release.xcconfig"; path = "Pods/Target Support Files/Pods-gank-io/Pods-gank-io.release.xcconfig"; sourceTree = "<group>"; };
 		BEBE2437106C4B39F7857F75 /* Pods-gank-io.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gank-io.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gank-io/Pods-gank-io.debug.xcconfig"; sourceTree = "<group>"; };
 		FBC71872D597CE143C3C4DA0 /* libPods-gank-io.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gank-io.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +164,8 @@
 		350711FB1B897B4500C97727 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3507120C1B8A008000C97727 /* SettingTableViewController.h */,
+				3507120D1B8A008000C97727 /* SettingTableViewController.m */,
 				350712091B89EE7200C97727 /* FavoriteTableViewController.h */,
 				3507120A1B89EE7200C97727 /* FavoriteTableViewController.m */,
 				350712001B89BE1700C97727 /* PageViewController.h */,
@@ -334,6 +339,7 @@
 				350712081B89BE6000C97727 /* ToastView.m in Sources */,
 				350711D11B886C6300C97727 /* ViewController.m in Sources */,
 				350711CE1B886C6300C97727 /* AppDelegate.m in Sources */,
+				3507120E1B8A008000C97727 /* SettingTableViewController.m in Sources */,
 				350711F01B88747900C97727 /* DailyViewController.m in Sources */,
 				350711CB1B886C6300C97727 /* main.m in Sources */,
 				350712021B89BE1700C97727 /* PageViewController.m in Sources */,

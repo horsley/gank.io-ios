@@ -28,6 +28,7 @@
     
     UIButton *settingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [settingBtn setImage:[UIImage imageNamed:@"menu_icn"] forState:UIControlStateNormal];
+    [settingBtn addTarget:self action:@selector(clickMenuBtn) forControlEvents:UIControlEventTouchUpInside];
     settingBtn.frame = CGRectMake(0, 0, 30, 30);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:settingBtn];
     
@@ -65,8 +66,8 @@
 }
 
 - (void) clickMenuBtn {
-    
-}
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SettingTableViewController"];
+    [self.navigationController pushViewController:vc animated:YES];}
 /*
 #pragma mark - Navigation
 
