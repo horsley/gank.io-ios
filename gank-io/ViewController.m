@@ -41,6 +41,7 @@
         [page setViewControllers:self.vcs direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
         
         UINavigationController *navc = [UINavigationController new];
+        navc.navigationBar.translucent = NO;
         [navc setViewControllers:@[page]];
         [self presentViewController:navc animated:NO completion:nil];
     }
